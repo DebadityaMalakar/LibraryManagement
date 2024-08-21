@@ -73,3 +73,7 @@ async def create_user(username: str, name: str, email: str, password: str, db: S
     db.commit()
     db.refresh(user)
     return {"status": "User created successfully"}
+
+@app.get("/api/{user}/books")
+async def getBooks(user:str):
+    return {"user":user}

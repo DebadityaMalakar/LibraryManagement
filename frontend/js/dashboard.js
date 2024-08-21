@@ -1,0 +1,12 @@
+$("document").ready(()=>{
+    if(localStorage.getItem("userid")){
+        document.title=localStorage.getItem("username");
+        document.getElementById("user").innerText=localStorage.getItem("username");
+        fetch(`http://127.0.0.1:8000/api/${localStorage.getItem("username")}/books`)
+        .then((va)=>{
+            console.log(va)
+        })
+    }else{
+        window.location.href="./login.html";
+    }
+})

@@ -9,7 +9,7 @@
 <body>
     <script>
         window.addEventListener("DOMContentLoaded",()=>{
-            if(document.cookie==""){
+            if(not(Boolean(localStorage.getItem("userid")))){
                 window.location.href="./login.html"
             }
         },false);

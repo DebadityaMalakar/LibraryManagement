@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    if(Boolean(localStorage.getItem("userid"))){
+        window.location.href="./dashboard.html"
+    }
     $('#submitbtn').on('click', function(event) {
         event.preventDefault(); // Prevent the default form submission
 
